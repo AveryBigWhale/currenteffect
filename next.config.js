@@ -16,6 +16,10 @@ const nextConfig = {
     });
     return config;
   },
+  images: {
+    loader: 'custom', // 使用你自定義的 loader
+    unoptimized: true, // 禁用內建圖片優化功能
+  },
   // basePath: isProd ? '/currenteffect' : '',
   // output: 'export',
   distDir: 'dist',
