@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 48, "column": 0}, "map": {"version":3,"sources":["file:///Users/koikbing/Desktop/arg-web/currenteffect/app/news/%5Bid%5D/page.tsx"],"sourcesContent":["import { useRouter } from 'next/router';\n\nconst NewsDetail = () => {\n  const router = useRouter();\n  const { id } = router.query; // 獲取路由參數\n\n  // 根據 id 獲取新聞數據的邏輯\n  // 這裡可以使用 fetch 或其他方法來獲取數據\n\n  return (\n    <div>\n      <h1>新聞詳細頁面 - ID: {id}</h1>\n      {/* 在這裡顯示新聞的詳細內容 */}\n    </div>\n  );\n};\n\nexport default NewsDetail;"],"names":[],"mappings":";;;;AAAA;;;AAEA,MAAM,aAAa;IACjB,MAAM,SAAS,CAAA,GAAA,8HAAA,CAAA,YAAS,AAAD;IACvB,MAAM,EAAE,EAAE,EAAE,GAAG,OAAO,KAAK,EAAE,SAAS;IAEtC,kBAAkB;IAClB,0BAA0B;IAE1B,qBACE,8OAAC;kBACC,cAAA,8OAAC;;gBAAG;gBAAc;;;;;;;;;;;;AAIxB;uCAEe","debugId":null}}]
+}

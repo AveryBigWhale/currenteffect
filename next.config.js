@@ -1,0 +1,52 @@
+// const { isPostfixUnaryExpression } = require('typescript')
+
+/**
+ * @type {import('next').NextConfig}
+ */
+// const isProd = process.env.NODE_ENV === 'production'
+
+const nextConfig = {
+  reactStrictMode: true,
+
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      issuer: /\.[jt]sx?$/,
+      use: ['@svgr/webpack'],
+    });
+    return config;
+  },
+  // basePath: isProd ? '/currenteffect' : '',
+  // output: 'export',
+  distDir: 'dist',
+  // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
+  // trailingSlash: true,
+  
+  // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
+  // skipTrailingSlashRedirect: true,
+  
+  // Optional: Change the output directory `out` -> `dist`
+  // distDir: 'dist',
+}
+   
+module.exports = nextConfig
+
+// import { NextConfig } from 'next';
+
+// const isProd = process.env.NODE_ENV === 'production';
+
+// const nextConfig: NextConfig = {
+//   basePath: isProd ? '/artfestarg-1.github.io' : '',
+//   output: 'export',
+//   distDir: 'dist',
+// };
+
+// export default nextConfig;
+
+// import type { NextConfig } from "next";
+
+// const nextConfig: NextConfig = {
+//   /* config options here */
+// };
+
+// export default nextConfig;

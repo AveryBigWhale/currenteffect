@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 29, "column": 0}, "map": {"version":3,"sources":["file:///Users/koikbing/Desktop/arg-web/currenteffect/app/news/%5Bid%5D/page.tsx"],"sourcesContent":["import { useParams } from 'next/navigation'; // 使用 useParams\nimport newsData from '../newsData.json'; // 引入新聞數據\n\nconst NewsDetail = () => {\n  const { id } = useParams(); // 獲取路由參數\n\n  // 根據 id 獲取對應的新聞數據\n  const newsItem = newsData.find((news) => news.id === parseInt(id as string));\n\n  if (!newsItem) {\n    return <div>新聞未找到</div>;\n  }\n\n  return (\n    <div>\n      <h1>{newsItem.title}</h1>\n      <img src={newsItem.imageUrl} alt={newsItem.title} />\n      <p>{newsItem.date}</p>\n      <p>{newsItem.description}</p>\n    </div>\n  );\n};\n\nexport default NewsDetail;"],"names":[],"mappings":";;;;AAAA,8UAA6C,eAAe;AAA5D;AACA,0KAAyC,SAAS;;;;AAElD,MAAM,aAAa;IACjB,MAAM,EAAE,EAAE,EAAE,GAAG,CAAA,GAAA,qLAAA,CAAA,YAAS,AAAD,KAAK,SAAS;IAErC,kBAAkB;IAClB,MAAM,WAAW,+FAAA,CAAA,UAAQ,CAAC,IAAI,CAAC,CAAC,OAAS,KAAK,EAAE,KAAK,SAAS;IAE9D,IAAI,CAAC,UAAU;QACb,qBAAO,8OAAC;sBAAI;;;;;;IACd;IAEA,qBACE,8OAAC;;0BACC,8OAAC;0BAAI,SAAS,KAAK;;;;;;0BACnB,8OAAC;gBAAI,KAAK,SAAS,QAAQ;gBAAE,KAAK,SAAS,KAAK;;;;;;0BAChD,8OAAC;0BAAG,SAAS,IAAI;;;;;;0BACjB,8OAAC;0BAAG,SAAS,WAAW;;;;;;;;;;;;AAG9B;uCAEe","debugId":null}}]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/koikbing/Desktop/arg-web/currenteffect/app/layout.tsx"],"sourcesContent":["// app/layout.tsx\nimport './globals.css';\n\nimport { ReactNode } from 'react';\nimport React, { useRef } from 'react';\n\nexport const metadata = {\n  title: '你的網站標題',\n  description: '網站描述',\n};\n\nexport default function RootLayout({ children }: { children: ReactNode }) {\n  const scrollContainerRef = useRef(null);\n\n  return (\n    \n    <html lang=\"zh-TW\">\n      <body>\n        \n        <main>{children}</main>\n      </body>\n    </html>\n  );\n}"],"names":[],"mappings":"AAAA,iBAAiB;;;;;;AAIjB;;;;AAEO,MAAM,WAAW;IACtB,OAAO;IACP,aAAa;AACf;AAEe,SAAS,WAAW,EAAE,QAAQ,EAA2B;IACtE,MAAM,qBAAqB,CAAA,GAAA,qMAAA,CAAA,SAAM,AAAD,EAAE;IAElC,qBAEE,8OAAC;QAAK,MAAK;kBACT,cAAA,8OAAC;sBAEC,cAAA,8OAAC;0BAAM;;;;;;;;;;;;;;;;AAIf","debugId":null}},
+    {"offset": {"line": 49, "column": 0}, "map": {"version":3,"sources":["file:///Users/koikbing/Desktop/arg-web/currenteffect/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = require('../../module.compiled').vendored[\n  'react-rsc'\n].ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":";AAAAA,OAAOC,OAAO,GAAGC,QAAQ,4HAAyBC,QAAQ,CACxD,YACD,CAACC,kBAAkB","ignoreList":[0],"debugId":null}}]
+}
