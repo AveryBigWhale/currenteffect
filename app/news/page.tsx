@@ -5,6 +5,13 @@ import React from 'react';
 import Image from 'next/image';
 import ImageLoader from '@/components/ImageLoader'; // Adjust the path as necessary
 
+import news1 from '../public/news1.png';
+import news2 from '../public/news2.png';
+import news3 from '../public/news3.png';
+
+const newsImages = [news1, news2, news3];
+
+
 const NewsList = () => {
   return (
     <div className="min-h-screen bg-white py-12 px-8">
@@ -21,8 +28,10 @@ const NewsList = () => {
                   <Image
                     width={500}
                     height={500}
-                    src={news.imageUrl}
+                    src={newsImages[news.id -1]}
+                    // src={news.imageUrl}
                     alt={news.title}
+
                     className="w-full h-48 object-cover rounded-lg"
                     loader={ImageLoader}
                   />
