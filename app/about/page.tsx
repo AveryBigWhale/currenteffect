@@ -5,6 +5,7 @@ import React, { useRef } from 'react';
 // import NewsSection from '../../components/NewsSection';
 // import NavBar from '../../components/Navbar';
 // import Image from 'next/image';
+import ImageLoader from '@/components/ImageLoader'; 
 
 export default function Home() {
   const scrollContainerRef = useRef(null);
@@ -22,7 +23,7 @@ export default function Home() {
       <section
         className="relative h-screen snap-start flex flex-col justify-center items-center bg-cover bg-center"
         style={{ 
-          backgroundImage: "url('/banner-about.png')",
+          backgroundImage: `url(${ImageLoader({ src: '/banner-about.png' })})`,
           // backgroundColor: "rgba(255, 0, 0, 0.5)",
           boxShadow: "0 4px 20px rgba(0, 0, 0, 0.5)" // 自定義陰影效果
          }}
@@ -55,7 +56,7 @@ export default function Home() {
       </section> */}
       {/* Next Section */}
       <section style={{
-        backgroundImage: "url('/happyLife.png')",
+         backgroundImage: `url(${ImageLoader({ src: '/happyLife.png' })})`
         }} 
         className="h-screen snap-start flex flex-col justify-center items-center bg-gray-100">
         <div style={{ marginLeft: '5%', marginRight: '20%', marginTop: '25%', width: '75%',  zIndex: 1 }}

@@ -24,7 +24,7 @@ export default function Home() {
       {/* <NavBar scrollContainerRef={scrollContainerRef} onHeightChange={handleNavbarHeight} /> */}
       <section
         className="h-screen snap-start flex flex-col justify-center items-center bg-cover bg-center"
-        style={{ backgroundImage: `url(${ImageLoader({ src: '/banner.png' })}')` }}
+        style={{ backgroundImage: `url(${ImageLoader({ src: '/banner.png' })})` }}
       >
         <div style={{ marginLeft: '65%', marginRight: 'auto', width: 'auto' }}>
           <h1 className="text-4xl md:text-6xl text-white font-bold mb-4">
