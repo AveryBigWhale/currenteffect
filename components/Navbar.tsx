@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from "../assets/logo.svg"; // 使用 SVGR 轉換後的 Logo 元件
+import Logo from "../public/logo.svg"; // 使用 SVGR 轉換後的 Logo 元件
 
 // 定義傳入的 prop 型別，包含 scrollContainerRef 與 onHeightChange callback
 interface NavbarProps {
