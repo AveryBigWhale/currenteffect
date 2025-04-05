@@ -13,7 +13,6 @@ export default function Home() {
     setNavbarHeight(height);
   };
 
-
   return (
     <div ref={scrollContainerRef} className="h-screen overflow-y-scroll snap-y snap-mandatory"
     style={{ scrollPaddingTop: `${navbarHeight}px` }}>
