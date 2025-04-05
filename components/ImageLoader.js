@@ -1,4 +1,4 @@
    // components/ImageLoader.js
    export default function ImageLoader({ src }) {
-    return `https://averybigwhale.github.io/currenteffect${src}`;
+    return `https://averybigwhale.github.io/${src}`;
   }
