@@ -1,7 +1,7 @@
 
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useRef, useEffect  } from 'react';
 import newsData from '@/app/news/newsData.json';
 import Image from 'next/image';
 import ImageLoader from './ImageLoader'; // Adjust the path as necessary
@@ -13,6 +13,11 @@ type Props = {
 const NewsDetail = ({ id }: Props) => {
   const scrollContainerRef = useRef(null);
   const newsItem = newsData.find((news) => news.id === parseInt(id, 10));
+
+  useEffect(() => {
+    console.log('newsItem.imageUrl:', newsItem?.imageUrl);
+  }, [newsItem]);
+
 
   if (!newsItem) {
     return <div>新聞未找到</div>;
@@ -33,10 +38,14 @@ const NewsDetail = ({ id }: Props) => {
 
         <div
           className="text-gray-800 mt-4"
-          style={{ margin: '0 auto', textAlign: 'center', width: '75%', marginTop: '20px' }}
+          style={{ margin: '0 auto', textAlign: 'center', width: '75%', marginTop: '20px',
+            // backgroundImage: `url(${ImageLoader({ src: newsItem.imageUrl })})`,
+          }}
+          
         >
           <Image
             style={{ margin: '0 auto', width: '100%', marginTop: '20px' }}
+            unoptimized
             src={newsItem.imageUrl}
             alt={newsItem.title}
             width={800}

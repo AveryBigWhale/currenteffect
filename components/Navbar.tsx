@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from "../public/logo.svg"; // 使用 SVGR 轉換後的 Logo 元件
+import Logo from "../public/logo.png"; // 使用 SVGR 轉換後的 Logo 元件
 import ImageLoader from './ImageLoader'; // Adjust the path as necessary
 
 // 定義傳入的 prop 型別，包含 scrollContainerRef 與 onHeightChange callback
