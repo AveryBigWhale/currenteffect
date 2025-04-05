@@ -2,6 +2,16 @@
 import './globals.css';
 import { ReactNode } from 'react';
 import HomeClient from './HomeClient';
+// import type { Metadata } from 'next';
+// import icon from '../public/web-logo.png';
+
+// export const metadata: Metadata = {
+//   title: 'Current Effect',
+//   // description: '探索前所未有的視覺體驗，打造屬於你的新時代。',
+//   icons: {
+//     icon: icon,  // 這邊對應 public 資料夾的 favicon
+//   },
+// }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (

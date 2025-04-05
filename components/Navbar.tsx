@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from "../public/logo.svg"; // 使用 SVGR 轉換後的 Logo 元件
+import ImageLoader from './ImageLoader'; // Adjust the path as necessary
 
 // 定義傳入的 prop 型別，包含 scrollContainerRef 與 onHeightChange callback
 interface NavbarProps {
@@ -56,7 +57,8 @@ export default function Navbar({ scrollContainerRef, onHeightChange, fixedColor 
           {/* LOGO */}
           <div className="flex-shrink-0">
             <Link href="/">
-              <Image src={Logo} alt="Newspaper Icon" width={240} height={100} />
+              <Image src={Logo} alt="Newspaper Icon" width={240} height={100} 
+              loader={ImageLoader}/>
             </Link>
           </div>
           {/* 桌機選單：在 md 以上顯示 */}
