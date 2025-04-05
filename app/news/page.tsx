@@ -18,6 +18,8 @@ const NewsList = () => {
               {news.imageUrl && (
                 <div className="md:w-1/3 w-full">
                   <Image
+                    width={500}
+                    height={500}
                     src={news.imageUrl}
                     alt={news.title}
                     className="w-full h-48 object-cover rounded-lg"

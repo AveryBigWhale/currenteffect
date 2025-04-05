@@ -25,6 +25,8 @@ export default function NewsSection() {
               <Image
                 src={news.imageUrl}
                 alt={news.title}
+                width={500}
+                height={200}
                 className="w-full h-48 object-cover"
               />
               <div className="p-4">
