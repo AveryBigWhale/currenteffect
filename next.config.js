@@ -16,7 +16,7 @@ const nextConfig = {
     });
     return config;
   },
-  // basePath: isProd ? '/currenteffect' : '',
+  basePath: isProd ? '/currenteffect' : '',
   // output: 'export',
   distDir: 'dist',
   images: {
