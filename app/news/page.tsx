@@ -3,6 +3,7 @@ import Link from 'next/link';
 import newsData from './newsData.json';
 import React from 'react';
 import Image from 'next/image';
+import ImageLoader from '@/components/ImageLoader'; // Adjust the path as necessary
 
 const NewsList = () => {
   return (

@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import newsData from '@/app/news/newsData.json'; // 引入新聞數據
 import Image from 'next/image';
+import ImageLoader from './ImageLoader'; 
 
 export default function NewsSection() {
   // 假設這裡的資料是靜態的
@@ -28,6 +29,7 @@ export default function NewsSection() {
                 width={500}
                 height={200}
                 className="w-full h-48 object-cover"
+                loader={ImageLoader}
               />
               <div className="p-4">
                 <div className="text-sm text-[#001f3f] mb-1">{news.date}</div>
