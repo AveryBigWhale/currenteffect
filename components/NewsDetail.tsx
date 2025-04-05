@@ -5,10 +5,16 @@ import React, { useRef, useEffect  } from 'react';
 import newsData from '@/app/news/newsData.json';
 import Image from 'next/image';
 import ImageLoader from './ImageLoader'; // Adjust the path as necessary
+import news1 from '../public/news1.png';
+import news2 from '../public/news2.png';
+import news3 from '../public/news3.png';
+
+const newsImages = [news1, news2, news3];
 
 type Props = {
   id: string;
 };
+
 
 
 const NewsDetail = ({ id }: Props) => {
@@ -47,7 +53,8 @@ const NewsDetail = ({ id }: Props) => {
           <Image
             style={{ margin: '0 auto', width: '100%', marginTop: '20px' }}
             unoptimized
-            src={newsItem.imageUrl}
+            src={newsImages[newsItem.id -1]}
+            // src={newsItem.imageUrl}
             alt={newsItem.title}
             width={800}
             height={400}

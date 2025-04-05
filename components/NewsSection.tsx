@@ -3,6 +3,11 @@ import Link from 'next/link';
 import newsData from '@/app/news/newsData.json'; // 引入新聞數據
 import Image from 'next/image';
 import ImageLoader from './ImageLoader'; 
+import news1 from '../public/news1.png';
+import news2 from '../public/news2.png';
+import news3 from '../public/news3.png';
+
+const newsImages = [news1, news2, news3];
 
 export default function NewsSection() {
   // 假設這裡的資料是靜態的
@@ -24,7 +29,8 @@ export default function NewsSection() {
             <Link key={news.id} href={`/news/${news.id}`}> {/* 使用 Link 組件包裹新聞項目 */}
             <div className="bg-white shadow rounded overflow-hidden cursor-pointer"> {/* 添加 cursor-pointer 以顯示可點擊 */}
               <Image
-                src={news.imageUrl}
+                src={newsImages[news.id -1]}
+                // src={news.imageUrl}
                 alt={news.title}
                 width={500}
                 height={200}
