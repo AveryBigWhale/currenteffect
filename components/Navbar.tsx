@@ -87,7 +87,8 @@ export default function Navbar({ scrollContainerRef, onHeightChange, fixedColor 
       </div>
       {/* 行動版選單內容：僅在 isOpen 為 true 時顯示 */}
       {isOpen && (
-        <div className="md:hidden bg-[#001f3f]">
+        <div className="md:hidden bg-[#001f3f]"
+        style={{ backgroundColor: fixedColor || (scrolled ? '#001f3f' : 'transparent') }} >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link href="/" className="block text-white hover:underline">
               首頁
@@ -98,8 +99,8 @@ export default function Navbar({ scrollContainerRef, onHeightChange, fixedColor 
             {/* <Link href="/services" className="block text-white hover:underline">
               服務項目
             </Link> */}
-            <Link href="/contact" className="block text-white hover:underline">
-              聯絡我們
+            <Link href="/news" className="block text-white hover:underline">
+              新聞
             </Link>
           </div>
         </div>
