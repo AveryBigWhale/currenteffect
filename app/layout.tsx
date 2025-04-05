@@ -2,7 +2,7 @@
 import './globals.css';
 import { ReactNode } from 'react';
 import HomeClient from './HomeClient';
-// import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 // import icon from '../public/web-logo.png';
 
 // export const metadata: Metadata = {
@@ -12,6 +12,12 @@ import HomeClient from './HomeClient';
 //     icon: icon,  // 這邊對應 public 資料夾的 favicon
 //   },
 // }
+export const metadata: Metadata = {
+  title: 'Current Effect',
+  icons: {
+    icon: '../public/web-logo.png', // ✅ 不要 import，直接寫字串路徑
+  },
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
