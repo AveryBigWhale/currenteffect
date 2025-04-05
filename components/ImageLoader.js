@@ -4,6 +4,6 @@
   // }
 
   // components/ImageLoader.js
-export default function imageLoader({ src, width, quality }) {
+export default function imageLoader({ src}) {
   return `https://averybigwhale.github.io/currenteffect${src}`;
 }
