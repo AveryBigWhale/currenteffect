@@ -5,9 +5,9 @@ import React from 'react';
 import Image from 'next/image';
 import ImageLoader from '@/components/ImageLoader'; // Adjust the path as necessary
 
-import news1 from '@/public/news1.png';
-import news2 from '@/public/news2.png';
-import news3 from '@/public/news3.png';
+import news1 from '../../public/news1.png';
+import news2 from '../../public/news2.png';
+import news3 from '../../public/news3.png';
 
 const newsImages = [news1, news2, news3];
 
