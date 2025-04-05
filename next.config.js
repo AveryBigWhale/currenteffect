@@ -3,7 +3,7 @@
 /**
  * @type {import('next').NextConfig}
  */
-// const isProd = process.env.NODE_ENV === 'production'
+const isProd = process.env.NODE_ENV === 'production'
 
 const nextConfig = {
   reactStrictMode: true,
@@ -16,13 +16,13 @@ const nextConfig = {
     });
     return config;
   },
+  // basePath: isProd ? '/currenteffect' : '',
+  // output: 'export',
+  distDir: 'dist',
   images: {
     loader: 'custom', // 使用你自定義的 loader
     unoptimized: true, // 禁用內建圖片優化功能
   },
-  // basePath: isProd ? '/currenteffect' : '',
-  // output: 'export',
-  distDir: 'dist',
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
   // trailingSlash: true,
   
@@ -43,14 +43,6 @@ module.exports = nextConfig
 //   basePath: isProd ? '/artfestarg-1.github.io' : '',
 //   output: 'export',
 //   distDir: 'dist',
-// };
-
-// export default nextConfig;
-
-// import type { NextConfig } from "next";
-
-// const nextConfig: NextConfig = {
-//   /* config options here */
 // };
 
 // export default nextConfig;
