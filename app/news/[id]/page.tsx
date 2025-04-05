@@ -1,19 +1,63 @@
-import newsData from '../newsData.json';
+// import newsData from '../newsData.json';
 import NewsDetail from '@/components/NewsDetail';
+import fs from 'fs';
+import path from 'path';
 
-type Props = {
-  params: { id: string };
+type NewsItem = {
+  id: number;
+  date: string;
+  title: string;
+  description: string[];
+  subtitle: string[];
+  texts: string[];
+  imageUrl: string;
 };
 
-export async function generateStaticParams() {
+
+type Params = Promise<{ id: string }>
+// type Props = {
+//   params: { id: string };
+// };
+
+const getNewsData = (): NewsItem[]  => {
+  const filePath = path.join(process.cwd(), 'app/news/newsData.json');
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  return JSON.parse(fileContent);
+};
+// const getNewsData = () => {
+//   const filePath = path.join(process.cwd(), 'app/news/newsData.json');
+//   const fileContent = fs.readFileSync(filePath, 'utf-8');
+//   return JSON.parse(fileContent);
+// };
+
+export function generateStaticParams() {
+  const newsData = getNewsData();
   return newsData.map((news) => ({
     id: news.id.toString(),
   }));
 }
 
-export default function Page({ params }: Props) {
+// export async function generateStaticParams() {
+//   return newsData.map((news) => ({
+//     id: news.id.toString(),
+//   }));
+// }
+
+export default async function Page(props: { params: Params }) {
+  const params = await props.params;
+// export default function Page({ params }: Props) {
+  const newsData = getNewsData();
+  const id = parseInt(params.id, 10);
+  const news = newsData.find((news) => news.id === id);
+
+  if (!news) return <div>找不到資料</div>;
+
   return <NewsDetail id={params.id} />;
 }
+
+// export default function Page({ params }: Props) {
+//   return <NewsDetail id={params.id} />;
+// }
 
 // "use client"
 
