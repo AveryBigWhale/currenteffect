@@ -4,6 +4,7 @@
 import React, { useRef } from 'react';
 import newsData from '@/app/news/newsData.json';
 import Image from 'next/image';
+import ImageLoader from './ImageLoader'; // Adjust the path as necessary
 
 type Props = {
   id: string;
@@ -40,6 +41,7 @@ const NewsDetail = ({ id }: Props) => {
             alt={newsItem.title}
             width={800}
             height={400}
+            loader={ImageLoader}
           />
         </div>
 
