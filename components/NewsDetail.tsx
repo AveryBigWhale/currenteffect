@@ -51,7 +51,8 @@ const NewsDetail = ({ id }: Props) => {
             alt={newsItem.title}
             width={800}
             height={400}
-            loader={ImageLoader}
+            loader={({ src }) => ImageLoader({ src })}
+            // loader={ImageLoader}
           />
         </div>
 
