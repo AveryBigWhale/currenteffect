@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import newsData from './newsData.json';
 import React from 'react';
+import Image from 'next/image';
 
 const NewsList = () => {
   return (
@@ -16,7 +17,7 @@ const NewsList = () => {
               {/* 圖片區塊 */}
               {news.imageUrl && (
                 <div className="md:w-1/3 w-full">
-                  <img
+                  <Image
                     src={news.imageUrl}
                     alt={news.title}
                     className="w-full h-48 object-cover rounded-lg"

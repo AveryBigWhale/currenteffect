@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from 'react';
 import NewsSection from '../components/NewsSection';
-import NavBar from '../components/Navbar';
+// import NavBar from '../components/Navbar';
 
 export default function Home() {
   const scrollContainerRef = useRef(null);
@@ -11,7 +11,7 @@ export default function Home() {
   const handleNavbarHeight = (height: number) => {
     setNavbarHeight(height);
   };
-  
+
 
 
   return (

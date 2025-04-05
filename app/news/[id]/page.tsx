@@ -3,8 +3,9 @@
 import React, { useRef, useState } from 'react';
 import { useParams } from 'next/navigation'; // 使用 useParams
 import newsData from '../newsData.json'; // 引入新聞數據
-import Layout from '../../layout'; // 引入佈局組件
-import Navbar from '../../../components/Navbar'; // 引入 Navbar
+import Image from 'next/image';
+// import Layout from '../../layout'; // 引入佈局組件
+// import Navbar from '../../../components/Navbar'; // 引入 Navbar
 
 const NewsDetail = () => {
   const { id } = useParams(); // 獲取路由參數
@@ -44,7 +45,7 @@ const NewsDetail = () => {
         </div>
         
         <div className=" text-gray-800 mt-4" style={{ margin: '0 auto', textAlign: 'center', width: '75%', marginTop: '20px' }}>
-          <img style={{ margin: '0 auto', textAlign: 'center', width: '100%', marginTop: '20px'  }}
+          <Image style={{ margin: '0 auto', textAlign: 'center', width: '100%', marginTop: '20px'  }}
           src={newsItem.imageUrl} alt={newsItem.title} />
         </div>
 

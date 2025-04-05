@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useRef, useState } from 'react';
-import NewsSection from '../../components/NewsSection';
-import NavBar from '../../components/Navbar';
-import Image from 'next/image';
+// import NewsSection from '../../components/NewsSection';
+// import NavBar from '../../components/Navbar';
+// import Image from 'next/image';
 
 export default function Home() {
   const scrollContainerRef = useRef(null);
