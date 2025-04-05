@@ -6,7 +6,8 @@ import React, { useRef, useState } from 'react';
 import Navbar from '../components/Navbar';
 
 export default function HomeClient({ children }: { children: React.ReactNode }) {
-  const scrollContainerRef = useRef<HTMLElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  // const scrollContainerRef = useRef<HTMLDivElement>;
   const [navbarHeight, setNavbarHeight] = useState(0);
 
   const handleNavbarHeight = (height: number) => {

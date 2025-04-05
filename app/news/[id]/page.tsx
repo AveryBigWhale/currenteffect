@@ -1,6 +1,7 @@
 "use client"
 
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
+  // , useState } from 'react';
 import { useParams } from 'next/navigation'; // 使用 useParams
 import newsData from '../newsData.json'; // 引入新聞數據
 import Image from 'next/image';
@@ -10,11 +11,11 @@ import Image from 'next/image';
 const NewsDetail = () => {
   const { id } = useParams(); // 獲取路由參數
   const scrollContainerRef = useRef(null);
-  const [navbarHeight, setNavbarHeight] = useState(0);
+  // const [navbarHeight, setNavbarHeight] = useState(0);
   
-  const handleNavbarHeight = (height: number) => {
-    setNavbarHeight(height);
-  };
+  // const handleNavbarHeight = (height: number) => {
+  //   setNavbarHeight(height);
+  // };
 
   // 根據 id 獲取對應的新聞數據
   const newsItem = newsData.find((news) => news.id === parseInt(id as string));
@@ -24,8 +25,8 @@ const NewsDetail = () => {
   }
 
   return (
-    <div ref={scrollContainerRef} className="bg-white min-h-screen overflow-y-scroll snap-y snap-mandatory"
-    style={{ scrollPaddingTop: `${navbarHeight}px` }}>
+    <div ref={scrollContainerRef} className="bg-white min-h-screen overflow-y-scroll snap-y snap-mandatory">
+    {/* style={{ scrollPaddingTop: `${navbarHeight}px` }}> */}
       
       {/* Full-screen Banner Section */}
       {/* <Navbar

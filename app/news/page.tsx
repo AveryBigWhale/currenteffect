@@ -33,7 +33,8 @@ const NewsList = () => {
                 {/* 顯示 description 的前幾行 */}
                 {typeof news.description === 'string' ? (
                   <p className="text-gray-700 leading-relaxed line-clamp-3">
-                    {news.description.split('\n')[0]}...
+                    
+                    {(news.description as string).split('\n')[0]}...
                   </p>
                 ) : (
                   <p className="text-gray-700 leading-relaxed line-clamp-3">

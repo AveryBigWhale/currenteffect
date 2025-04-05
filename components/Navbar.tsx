@@ -6,7 +6,9 @@ import Logo from "../assets/logo.svg"; // 使用 SVGR 轉換後的 Logo 元件
 
 // 定義傳入的 prop 型別，包含 scrollContainerRef 與 onHeightChange callback
 interface NavbarProps {
-  scrollContainerRef: React.RefObject<HTMLElement>;
+  // scrollContainerRef: React.RefObject<HTMLElement>;
+  // scrollContainerRef: React.RefObject<HTMLDivElement>;
+  scrollContainerRef: React.RefObject<HTMLDivElement | null>;
   onHeightChange: (height: number) => void;
   fixedColor?: string; // 新增的 prop
 }

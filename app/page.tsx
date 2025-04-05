@@ -1,22 +1,23 @@
 "use client"
 
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
+  // , useState } from 'react';
 import NewsSection from '../components/NewsSection';
 // import NavBar from '../components/Navbar';
 
 export default function Home() {
   const scrollContainerRef = useRef(null);
-  const [navbarHeight, setNavbarHeight] = useState(0);
+  // const [navbarHeight, setNavbarHeight] = useState(0);
   
-  const handleNavbarHeight = (height: number) => {
-    setNavbarHeight(height);
-  };
+  // const handleNavbarHeight = (height: number) => {
+  //   setNavbarHeight(height);
+  // };
 
 
 
   return (
-    <div ref={scrollContainerRef} className="min-h-screen overflow-y-scroll snap-y snap-mandatory"
-    style={{ scrollPaddingTop: `${navbarHeight}px` }}>
+    <div ref={scrollContainerRef} className="min-h-screen overflow-y-scroll snap-y snap-mandatory">
+    {/* style={{ scrollPaddingTop: `${navbarHeight}px` }}> */}
       {/* Full-screen Banner Section */}
       {/* <NavBar scrollContainerRef={scrollContainerRef} onHeightChange={handleNavbarHeight} /> */}
       <section
