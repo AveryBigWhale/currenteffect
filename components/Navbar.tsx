@@ -27,7 +27,7 @@ export default function Navbar({ scrollContainerRef, onHeightChange, fixedColor 
     const container = scrollContainerRef?.current;
     if (!container) return;
     const handleScroll = () => {
-      console.log('scrollTop:', container.scrollTop);
+      // console.log('scrollTop:', container.scrollTop);
       setScrolled(container.scrollTop > 50);
     };
 
