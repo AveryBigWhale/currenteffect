@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useRef, useState } from 'react';
-import NewsSection from '../components/NewsSection';
+// import NewsSection from '../components/NewsSection';
 import Navbar from '../components/Navbar';
 
 export default function HomeClient({ children }: { children: React.ReactNode }) {
