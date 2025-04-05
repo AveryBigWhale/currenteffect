@@ -10,6 +10,7 @@ type Props = {
   id: string;
 };
 
+
 const NewsDetail = ({ id }: Props) => {
   const scrollContainerRef = useRef(null);
   const newsItem = newsData.find((news) => news.id === parseInt(id, 10));
